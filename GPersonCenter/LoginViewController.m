@@ -17,14 +17,6 @@
 
 @implementation LoginViewController
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [_usernameTextField setValue:[UIColor lightGrayColor] forKeyPath:@"_placeholderLabel.textColor"];
-    [_passwordTextField setValue:[UIColor lightGrayColor] forKeyPath:@"_placeholderLabel.textColor"];
-    
-    [super viewWillAppear:animated];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
