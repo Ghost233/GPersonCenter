@@ -26,6 +26,7 @@ PODS:
     - FMDB
     - GFoundation/Core (= 0.0.35)
     - GFoundation/GUI (= 0.0.35)
+    - GFoundation/QuickStoryboard (= 0.0.35)
     - Mantle
     - Masonry
     - NSLogger
@@ -63,10 +64,25 @@ PODS:
     - UIView+FDCollapsibleConstraints
     - XXNibBridge
     - YYKit
+  - GFoundation/QuickStoryboard (0.0.35):
+    - AFNetworking
+    - FDFullscreenPopGesture
+    - FDStackView
+    - FMDB
+    - Mantle
+    - Masonry
+    - NSLogger
+    - pop
+    - ReactiveCocoa
+    - UITableView+FDTemplateLayoutCell
+    - UIView+FDCollapsibleConstraints
+    - XXNibBridge
+    - YYKit
   - Mantle (2.0.6):
     - Mantle/extobjc (= 2.0.6)
   - Mantle/extobjc (2.0.6)
   - Masonry (0.6.4)
+  - MMMaterialDesignSpinner (0.2.3)
   - NSLogger (1.5.1):
     - NSLogger/Standard (= 1.5.1)
   - NSLogger/Standard (1.5.1)
@@ -92,6 +108,7 @@ PODS:
 
 DEPENDENCIES:
   - GFoundation (from `git@github.com:Ghost233/GFoundation.git`)
+  - MMMaterialDesignSpinner
 
 EXTERNAL SOURCES:
   GFoundation:
@@ -99,7 +116,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   GFoundation:
-    :commit: 18f2ce0fe20be64a68865ee28f0ffb065fde0137
+    :commit: 40e7b9ba4ba5d06167e5229d939c822127287e02
     :git: git@github.com:Ghost233/GFoundation.git
 
 SPEC CHECKSUMS:
@@ -107,9 +124,10 @@ SPEC CHECKSUMS:
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   FDStackView: 3a4bbe0ce9c35e974246a585168b9da8c32213f1
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
-  GFoundation: 6daffed2819c74e9d235d638e7c9e98bb2f0ed97
+  GFoundation: 27837c4f7e90987268f0a2c40220f5b8d53073f9
   Mantle: 299966b00759634931699f69cb6a30b9239b944d
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
+  MMMaterialDesignSpinner: 55c80b454f7928d0ed789cc3c456fa06bd6a2f16
   NSLogger: 5ed223a2436df96244e033be750656dacdeec034
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   ReactiveCocoa: f7011630aee4deeb16352fcb1b50d6bde9db4f90

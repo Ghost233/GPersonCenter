@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		AF0CFCF3E912905B4DF897CC /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA5EF6AD68CB51185044ACE /* Pods.framework */; };
+		E65952461CA41D3A0048F3EA /* DeformationButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E65952421CA41D3A0048F3EA /* DeformationButton.m */; };
+		E6984B8A1CA54EC700C4619A /* LoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E6984B891CA54EC700C4619A /* LoginButton.m */; };
 		E6B6F3911CA26E4C004CB658 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B6F3901CA26E4C004CB658 /* main.m */; };
 		E6B6F3941CA26E4C004CB658 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B6F3931CA26E4C004CB658 /* AppDelegate.m */; };
-		E6B6F3971CA26E4C004CB658 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B6F3961CA26E4C004CB658 /* ViewController.m */; };
 		E6B6F39A1CA26E4C004CB658 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6B6F3981CA26E4C004CB658 /* Main.storyboard */; };
 		E6B6F39C1CA26E4C004CB658 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6B6F39B1CA26E4C004CB658 /* Assets.xcassets */; };
 		E6B6F39F1CA26E4C004CB658 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6B6F39D1CA26E4C004CB658 /* LaunchScreen.storyboard */; };
@@ -39,12 +40,14 @@
 
 /* Begin PBXFileReference section */
 		A5BB89EB6BF4AA2BD2EFF27B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		E65952411CA41D3A0048F3EA /* DeformationButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeformationButton.h; sourceTree = "<group>"; };
+		E65952421CA41D3A0048F3EA /* DeformationButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeformationButton.m; sourceTree = "<group>"; };
+		E6984B881CA54EC700C4619A /* LoginButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginButton.h; sourceTree = "<group>"; };
+		E6984B891CA54EC700C4619A /* LoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginButton.m; sourceTree = "<group>"; };
 		E6B6F38C1CA26E4C004CB658 /* GPersonCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPersonCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6B6F3901CA26E4C004CB658 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E6B6F3921CA26E4C004CB658 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E6B6F3931CA26E4C004CB658 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E6B6F3951CA26E4C004CB658 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E6B6F3961CA26E4C004CB658 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E6B6F3991CA26E4C004CB658 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E6B6F39B1CA26E4C004CB658 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6B6F39E1CA26E4C004CB658 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,6 +61,7 @@
 		E6C3B3171CA29B1C00B01B6A /* LoginAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LoginAssets.xcassets; sourceTree = "<group>"; };
 		E6C3B3191CA2A88A00B01B6A /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		E6C3B31A1CA2A88A00B01B6A /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		E6C478B31CA42EA9008238DE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		EEA5EF6AD68CB51185044ACE /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF3D25789CA7A06BEDDEB68E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +100,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E659523F1CA41D3A0048F3EA /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				E65952401CA41D3A0048F3EA /* MozSinaBtn */,
+				E6984B881CA54EC700C4619A /* LoginButton.h */,
+				E6984B891CA54EC700C4619A /* LoginButton.m */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		E65952401CA41D3A0048F3EA /* MozSinaBtn */ = {
+			isa = PBXGroup;
+			children = (
+				E65952411CA41D3A0048F3EA /* DeformationButton.h */,
+				E65952421CA41D3A0048F3EA /* DeformationButton.m */,
+			);
+			path = MozSinaBtn;
+			sourceTree = "<group>";
+		};
 		E6B6F3831CA26E4C004CB658 = {
 			isa = PBXGroup;
 			children = (
@@ -121,10 +144,9 @@
 		E6B6F38E1CA26E4C004CB658 /* GPersonCenter */ = {
 			isa = PBXGroup;
 			children = (
+				E659523F1CA41D3A0048F3EA /* lib */,
 				E6B6F3921CA26E4C004CB658 /* AppDelegate.h */,
 				E6B6F3931CA26E4C004CB658 /* AppDelegate.m */,
-				E6B6F3951CA26E4C004CB658 /* ViewController.h */,
-				E6B6F3961CA26E4C004CB658 /* ViewController.m */,
 				E6C3B3191CA2A88A00B01B6A /* LoginViewController.h */,
 				E6C3B31A1CA2A88A00B01B6A /* LoginViewController.m */,
 				E6B6F3981CA26E4C004CB658 /* Main.storyboard */,
@@ -141,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				E6B6F3901CA26E4C004CB658 /* main.m */,
+				E6C478B31CA42EA9008238DE /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -369,9 +392,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6C3B31B1CA2A88A00B01B6A /* LoginViewController.m in Sources */,
-				E6B6F3971CA26E4C004CB658 /* ViewController.m in Sources */,
 				E6B6F3941CA26E4C004CB658 /* AppDelegate.m in Sources */,
 				E6B6F3911CA26E4C004CB658 /* main.m in Sources */,
+				E6984B8A1CA54EC700C4619A /* LoginButton.m in Sources */,
+				E65952461CA41D3A0048F3EA /* DeformationButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,6 +539,7 @@
 			baseConfigurationReference = FF3D25789CA7A06BEDDEB68E /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/GPersonCenter/PrefixHeader.pch";
 				INFOPLIST_FILE = GPersonCenter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.ghost233.GPersonCenter;
@@ -527,6 +552,7 @@
 			baseConfigurationReference = A5BB89EB6BF4AA2BD2EFF27B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/GPersonCenter/PrefixHeader.pch";
 				INFOPLIST_FILE = GPersonCenter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.ghost233.GPersonCenter;

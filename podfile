@@ -3,3 +3,4 @@ use_frameworks!
 inhibit_all_warnings!
 
 pod 'GFoundation', :git => 'git@github.com:Ghost233/GFoundation.git'
+pod "MMMaterialDesignSpinner"
