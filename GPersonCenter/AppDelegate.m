@@ -16,6 +16,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    LoggerStart(LoggerGetDefaultLogger());
+    
     // Override point for customization after application launch.
     return YES;
 }

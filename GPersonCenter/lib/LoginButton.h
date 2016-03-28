@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoginButton : UIButton
+IB_DESIGNABLE
+
+@interface LoginButton : UIView
+
+@property (nonatomic, readwrite) IBInspectable CGFloat roundRectangleViewRadius;
+@property (nonatomic, strong) IBInspectable UIColor* roundRectangleViewColor;
+
+- (instancetype)initWithFrame:(CGRect)frame withColor:(UIColor*)color;
 
 @end

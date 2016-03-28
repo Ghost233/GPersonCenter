@@ -116,7 +116,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   GFoundation:
-    :commit: 40e7b9ba4ba5d06167e5229d939c822127287e02
+    :commit: dcc9c27bb685b80162cdd8be3b135254c887dfa3
     :git: git@github.com:Ghost233/GFoundation.git
 
 SPEC CHECKSUMS:
