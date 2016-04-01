@@ -15,6 +15,9 @@ IB_DESIGNABLE
 @property (nonatomic, readwrite) IBInspectable CGFloat roundRectangleViewRadius;
 @property (nonatomic, strong) IBInspectable UIColor* roundRectangleViewColor;
 
+@property (nonatomic, strong) void(^executeBlock)();
+@property (nonatomic, strong) void(^completeBlock)();
+
 - (instancetype)initWithFrame:(CGRect)frame withColor:(UIColor*)color;
 
 @end

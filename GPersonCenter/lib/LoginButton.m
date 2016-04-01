@@ -9,8 +9,12 @@
 #import "LoginButton.h"
 
 @interface LoginButton ()
+{
+    dispatch_semaphore_t animationFinishSemaphore;
+}
 
-@property (nonatomic, strong) GRoundRectangleView* roundRectangleView;
+@property (nonatomic, strong) GRoundRectangleVector* roundRectangleVector;
+@property (nonatomic, strong) MMMaterialDesignSpinner *spinnerView;
 @property (nonatomic, readwrite) bool firstLoad;
 @property (nonatomic, readwrite) CGFloat decrease;
 
@@ -52,18 +56,11 @@
     [self initTapGesture];
     
     self.firstLoad = true;
-    GRoundRectangleView* roundRectangleView = [[GRoundRectangleView alloc] init];
-    [self addSubview:roundRectangleView];
-    self.roundRectangleView = roundRectangleView;
-    [self.roundRectangleView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.bottom.equalTo(self);
-        make.centerX.equalTo(self);
-        make.width.equalTo(@(80));
-    }];
+    self.roundRectangleVector = [[GRoundRectangleVector alloc] init];
     
-    self.decrease = _roundRectangleView.size.width;
+    self.decrease = 0;
     
-    roundRectangleView.hidden = YES;
+    animationFinishSemaphore = dispatch_semaphore_create(0);
 }
 
 - (void)initTapGesture
@@ -90,7 +87,7 @@
     POPBasicAnimation *anBasic = [POPBasicAnimation linearAnimation];
     anBasic.property = radiusProp;
     anBasic.fromValue = @(self.roundRectangleViewRadius);
-    anBasic.toValue = @(_roundRectangleView.bounds.size.height / 2);
+    anBasic.toValue = @(self.bounds.size.height / 2);
     anBasic.duration = 0.5;
     [self pop_addAnimation:anBasic forKey:@"RoundRadiusIncrease"];
     
@@ -98,31 +95,78 @@
         prop.writeBlock = ^(id obj, const CGFloat values[]) {
             LoginButton* loginButton = (LoginButton*)obj;
             [loginButton setNeedsDisplay];
-            _decrease = values[0];
+            self.decrease = values[0];
         };
     }];
 
-    POPSpringAnimation *anSpring = [POPSpringAnimation animation];
-    anSpring.property = sizeProp;
-    anSpring.fromValue = @(0);
-    anSpring.toValue = @((self.size.width - self.size.height));
-    anSpring.springBounciness = 20;
-    anSpring.springSpeed = 50;
-    [self pop_addAnimation:anSpring forKey:@"SizeDecrease"];
+    POPBasicAnimation *sizeDecrease = [POPBasicAnimation easeInEaseOutAnimation];
+    sizeDecrease.property = sizeProp;
+    sizeDecrease.fromValue = @(0);
+    sizeDecrease.toValue = @((self.size.width - self.size.height));
+    sizeDecrease.duration = 0.3f;
+    [self pop_addAnimation:sizeDecrease forKey:@"SizeDecrease"];
+
+    self.spinnerView = [[MMMaterialDesignSpinner alloc] init];
+    
+    _spinnerView.lineWidth = 1.5f;
+    _spinnerView.tintColor = [UIColor greenColor];
+    
+    [_spinnerView startAnimating];
+    
+    [self addSubview:_spinnerView];
+    
+    [_spinnerView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.centerY.equalTo(self);
+        make.width.equalTo(_spinnerView.mas_height);
+        make.top.equalTo(self).with.offset(5);
+        make.bottom.equalTo(self).with.offset(-5);
+    }];
+
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        dispatch_semaphore_signal(animationFinishSemaphore);
+    });
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        dispatch_semaphore_wait(animationFinishSemaphore, DISPATCH_TIME_FOREVER);
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [_spinnerView stopAnimating];
+            
+//            [self initTapGesture];
+            if (self.completeBlock != NULL)
+            {
+                self.completeBlock();
+            }
+        });
+        
+        POPBasicAnimation* sizeDecrease = [POPBasicAnimation easeInEaseOutAnimation];
+        
+        sizeDecrease.property = sizeProp;
+        sizeDecrease.toValue = @(0);
+        sizeDecrease.fromValue = @((self.size.width - self.size.height));
+        sizeDecrease.duration = 0.3f;
+        [self pop_addAnimation:sizeDecrease forKey:@"SizeDecrease"];
+        
+        POPBasicAnimation* anBasic = [POPBasicAnimation linearAnimation];
+        anBasic.property = radiusProp;
+        anBasic.toValue = @(self.roundRectangleViewRadius);
+        anBasic.fromValue = @(self.bounds.size.height / 2);
+        anBasic.duration = 0.5;
+        [self pop_addAnimation:anBasic forKey:@"RoundRadiusIncrease"];
+    });
 }
 
 - (void)drawRect:(CGRect)rect {
     
     if (!self.firstLoad) [self load];
     
-    _roundRectangleView.color = _roundRectangleViewColor;
-    _roundRectangleView.radius = _roundRectangleViewRadius;
+    _roundRectangleVector.color = _roundRectangleViewColor;
+    _roundRectangleVector.radius = _roundRectangleViewRadius;
     
     if (_decrease > (self.size.width - self.size.height)) _decrease = self.size.width - self.size.height;
     
     CGRect tempRect = CGRectMake(_decrease / 2, 0, rect.size.width - _decrease, rect.size.height);
     
-    [_roundRectangleView drawCustomView:tempRect];
+    [_roundRectangleVector customDrawRect:tempRect];
     
     [super drawRect:rect];
 }

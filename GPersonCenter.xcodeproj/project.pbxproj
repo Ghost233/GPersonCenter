@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AF0CFCF3E912905B4DF897CC /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA5EF6AD68CB51185044ACE /* Pods.framework */; };
-		E65952461CA41D3A0048F3EA /* DeformationButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E65952421CA41D3A0048F3EA /* DeformationButton.m */; };
 		E6984B8A1CA54EC700C4619A /* LoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E6984B891CA54EC700C4619A /* LoginButton.m */; };
 		E6B6F3911CA26E4C004CB658 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B6F3901CA26E4C004CB658 /* main.m */; };
 		E6B6F3941CA26E4C004CB658 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B6F3931CA26E4C004CB658 /* AppDelegate.m */; };
@@ -19,6 +18,7 @@
 		E6B6F3B51CA26E4D004CB658 /* GPersonCenterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B6F3B41CA26E4D004CB658 /* GPersonCenterUITests.m */; };
 		E6C3B3181CA29B1C00B01B6A /* LoginAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6C3B3171CA29B1C00B01B6A /* LoginAssets.xcassets */; };
 		E6C3B31B1CA2A88A00B01B6A /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C3B31A1CA2A88A00B01B6A /* LoginViewController.m */; };
+		E6E217441CAE72C40099B47B /* PingTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E217431CAE72C40099B47B /* PingTransition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +40,6 @@
 
 /* Begin PBXFileReference section */
 		A5BB89EB6BF4AA2BD2EFF27B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		E65952411CA41D3A0048F3EA /* DeformationButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeformationButton.h; sourceTree = "<group>"; };
-		E65952421CA41D3A0048F3EA /* DeformationButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeformationButton.m; sourceTree = "<group>"; };
 		E6984B881CA54EC700C4619A /* LoginButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginButton.h; sourceTree = "<group>"; };
 		E6984B891CA54EC700C4619A /* LoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginButton.m; sourceTree = "<group>"; };
 		E6B6F38C1CA26E4C004CB658 /* GPersonCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPersonCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +60,8 @@
 		E6C3B3191CA2A88A00B01B6A /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		E6C3B31A1CA2A88A00B01B6A /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		E6C478B31CA42EA9008238DE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		E6E217421CAE72C40099B47B /* PingTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PingTransition.h; sourceTree = "<group>"; };
+		E6E217431CAE72C40099B47B /* PingTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PingTransition.m; sourceTree = "<group>"; };
 		EEA5EF6AD68CB51185044ACE /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF3D25789CA7A06BEDDEB68E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,20 +103,12 @@
 		E659523F1CA41D3A0048F3EA /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				E65952401CA41D3A0048F3EA /* MozSinaBtn */,
 				E6984B881CA54EC700C4619A /* LoginButton.h */,
 				E6984B891CA54EC700C4619A /* LoginButton.m */,
+				E6E217421CAE72C40099B47B /* PingTransition.h */,
+				E6E217431CAE72C40099B47B /* PingTransition.m */,
 			);
 			path = lib;
-			sourceTree = "<group>";
-		};
-		E65952401CA41D3A0048F3EA /* MozSinaBtn */ = {
-			isa = PBXGroup;
-			children = (
-				E65952411CA41D3A0048F3EA /* DeformationButton.h */,
-				E65952421CA41D3A0048F3EA /* DeformationButton.m */,
-			);
-			path = MozSinaBtn;
 			sourceTree = "<group>";
 		};
 		E6B6F3831CA26E4C004CB658 = {
@@ -391,11 +383,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6E217441CAE72C40099B47B /* PingTransition.m in Sources */,
 				E6C3B31B1CA2A88A00B01B6A /* LoginViewController.m in Sources */,
 				E6B6F3941CA26E4C004CB658 /* AppDelegate.m in Sources */,
 				E6B6F3911CA26E4C004CB658 /* main.m in Sources */,
 				E6984B8A1CA54EC700C4619A /* LoginButton.m in Sources */,
-				E65952461CA41D3A0048F3EA /* DeformationButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,7 +479,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -526,7 +518,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -547,6 +539,7 @@
 					"NSLOGGER_BUILD_USERNAME=\"${USER}\"",
 				);
 				INFOPLIST_FILE = GPersonCenter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.ghost233.GPersonCenter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -566,6 +559,7 @@
 					"NSLOGGER_BUILD_USERNAME=\"${USER}\"",
 				);
 				INFOPLIST_FILE = GPersonCenter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.ghost233.GPersonCenter;
 				PRODUCT_NAME = "$(TARGET_NAME)";

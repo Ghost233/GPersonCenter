@@ -19,14 +19,14 @@ PODS:
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
-  - GFoundation (0.0.35):
+  - GFoundation (0.0.36):
     - AFNetworking
     - FDFullscreenPopGesture
     - FDStackView
     - FMDB
-    - GFoundation/Core (= 0.0.35)
-    - GFoundation/GUI (= 0.0.35)
-    - GFoundation/QuickStoryboard (= 0.0.35)
+    - GFoundation/Core (= 0.0.36)
+    - GFoundation/GUI (= 0.0.36)
+    - GFoundation/QuickStoryboard (= 0.0.36)
     - Mantle
     - Masonry
     - NSLogger
@@ -36,21 +36,7 @@ PODS:
     - UIView+FDCollapsibleConstraints
     - XXNibBridge
     - YYKit
-  - GFoundation/Core (0.0.35):
-    - AFNetworking
-    - FDFullscreenPopGesture
-    - FDStackView
-    - FMDB
-    - Mantle
-    - Masonry
-    - NSLogger
-    - pop
-    - ReactiveCocoa
-    - UITableView+FDTemplateLayoutCell
-    - UIView+FDCollapsibleConstraints
-    - XXNibBridge
-    - YYKit
-  - GFoundation/GUI (0.0.35):
+  - GFoundation/Core (0.0.36):
     - AFNetworking
     - FDFullscreenPopGesture
     - FDStackView
@@ -64,7 +50,21 @@ PODS:
     - UIView+FDCollapsibleConstraints
     - XXNibBridge
     - YYKit
-  - GFoundation/QuickStoryboard (0.0.35):
+  - GFoundation/GUI (0.0.36):
+    - AFNetworking
+    - FDFullscreenPopGesture
+    - FDStackView
+    - FMDB
+    - Mantle
+    - Masonry
+    - NSLogger
+    - pop
+    - ReactiveCocoa
+    - UITableView+FDTemplateLayoutCell
+    - UIView+FDCollapsibleConstraints
+    - XXNibBridge
+    - YYKit
+  - GFoundation/QuickStoryboard (0.0.36):
     - AFNetworking
     - FDFullscreenPopGesture
     - FDStackView
@@ -87,18 +87,18 @@ PODS:
     - NSLogger/Standard (= 1.5.1)
   - NSLogger/Standard (1.5.1)
   - pop (1.0.9)
-  - ReactiveCocoa (4.0.1):
-    - ReactiveCocoa/UI (= 4.0.1)
-    - Result (~> 1.0.2)
-  - ReactiveCocoa/Core (4.0.1):
+  - ReactiveCocoa (4.1.0):
+    - ReactiveCocoa/UI (= 4.1.0)
+    - Result (~> 2.0)
+  - ReactiveCocoa/Core (4.1.0):
     - ReactiveCocoa/no-arc
-    - Result (~> 1.0.2)
-  - ReactiveCocoa/no-arc (4.0.1):
-    - Result (~> 1.0.2)
-  - ReactiveCocoa/UI (4.0.1):
+    - Result (~> 2.0)
+  - ReactiveCocoa/no-arc (4.1.0):
+    - Result (~> 2.0)
+  - ReactiveCocoa/UI (4.1.0):
     - ReactiveCocoa/Core
-    - Result (~> 1.0.2)
-  - Result (1.0.2)
+    - Result (~> 2.0)
+  - Result (2.0.0)
   - UITableView+FDTemplateLayoutCell (1.4)
   - UIView+FDCollapsibleConstraints (1.1)
   - XXNibBridge (2.2.3)
@@ -116,7 +116,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   GFoundation:
-    :commit: dcc9c27bb685b80162cdd8be3b135254c887dfa3
+    :commit: f2efa3e9c103a178f0e34b16b53d9a0b37fc60ce
     :git: git@github.com:Ghost233/GFoundation.git
 
 SPEC CHECKSUMS:
@@ -124,14 +124,14 @@ SPEC CHECKSUMS:
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   FDStackView: 3a4bbe0ce9c35e974246a585168b9da8c32213f1
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
-  GFoundation: 27837c4f7e90987268f0a2c40220f5b8d53073f9
+  GFoundation: a0095f6804481eed74f702d8d8e99f44bb376b7c
   Mantle: 299966b00759634931699f69cb6a30b9239b944d
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
   MMMaterialDesignSpinner: 55c80b454f7928d0ed789cc3c456fa06bd6a2f16
   NSLogger: 5ed223a2436df96244e033be750656dacdeec034
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
-  ReactiveCocoa: f7011630aee4deeb16352fcb1b50d6bde9db4f90
-  Result: dd3dd71af3fa2e262f1a999e14fba2c25ec14f16
+  ReactiveCocoa: d70004d7a366a7b8e87e60ce2347182c77701949
+  Result: 9e75e1111c774c6ac594e14907b15057053a7959
   UITableView+FDTemplateLayoutCell: 234e1582bcc4e18461af91155123bb96538ed030
   UIView+FDCollapsibleConstraints: 9357eaf03b4e088263ab74a3b86a382a64ce38dd
   XXNibBridge: 70adcf1e85a2b5500d9de5f12781944dc51b0521

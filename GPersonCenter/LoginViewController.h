@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+#import "LoginButton.h"
+
 @interface LoginViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet LoginButton *loginButton;
 
 @end
